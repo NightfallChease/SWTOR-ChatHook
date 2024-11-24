@@ -1,0 +1,14 @@
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Release\SWTOR-ChatHook.exe.config
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Release\SWTOR-ChatHook.exe
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Release\SWTOR-ChatHook.pdb
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Release\Memory.xml
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Release\System.Diagnostics.DiagnosticSource.xml
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-ChatHook.csproj.AssemblyReference.cache
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR_ChatHook.Mainform.resources
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR_ChatHook.Properties.Resources.resources
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-ChatHook.csproj.GenerateResource.cache
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-ChatHook.csproj.CoreCompileInputs.cache
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-ChatHook.csproj.Fody.CopyLocal.cache
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-Ch.98FE013B.Up2Date
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-ChatHook.exe
+C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Release\SWTOR-ChatHook.pdb

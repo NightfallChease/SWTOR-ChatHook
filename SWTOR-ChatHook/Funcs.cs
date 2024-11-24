@@ -14,6 +14,7 @@ namespace SWTOR_ChatHook
         string aobAddrStr;
         UIntPtr aobUintPtr;
         bool hooked = false;
+        private string filePath;
 
         public int attachToProc()
         {
@@ -108,10 +109,28 @@ namespace SWTOR_ChatHook
 
         public void saveTextToFile(string msgToSave)
         {
-            string docPath = Environment.CurrentDirectory;
+            if (filePath == null)
+            {
+                string baseFileName = "Messages";
+                string extension = ".txt";
+                string directory = Environment.CurrentDirectory;
 
-            // Use Append mode to add to the file instead of overwriting it
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Messages.txt"), append: true))
+                int fileNumber = 0;
+                string fileName;
+
+                // Find a unique file name only once
+                do
+                {
+                    fileNumber++;
+                    fileName = Path.Combine(directory, $"{baseFileName}{(fileNumber == 1 ? "" : fileNumber.ToString())}{extension}");
+                } while (File.Exists(fileName));
+
+                filePath = fileName;
+                Console.WriteLine($"File created: {filePath}");
+            }
+
+            // Append the message to the persistent file
+            using (StreamWriter outputFile = new StreamWriter(filePath, append: true))
             {
                 outputFile.WriteLine(msgToSave);
             }

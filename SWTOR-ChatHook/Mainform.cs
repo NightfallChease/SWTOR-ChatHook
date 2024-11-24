@@ -74,6 +74,14 @@ namespace SWTOR_ChatHook
 
             if (notificationsEnabled)
             {
+                try
+                {
+
+                }
+                catch
+                {
+                    logText("No notifcation sound presend. Please add a Notification.wav to the folder.");
+                }
                 string soundPath = "Notification.wav";
                 SoundPlayer soundPlayer = new SoundPlayer(soundPath);
 
@@ -82,7 +90,7 @@ namespace SWTOR_ChatHook
 
             if (logToFile)
             {
-                funcs.saveTextToFile(txtbox_chat.Text + "\n\r");
+                funcs.saveTextToFile(txtbox_chat.Text);
             }
         }
 
