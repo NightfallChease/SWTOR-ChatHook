@@ -13,6 +13,7 @@ namespace SWTOR_ChatHook
     {
         Mem m = new Mem();
         byte[] originalBytes;
+        byte[] patchedBytes;
         string aobAddrStr;
         UIntPtr aobUintPtr;
         bool hooked = false;
@@ -45,12 +46,12 @@ namespace SWTOR_ChatHook
 
                 UIntPtr addrStrUint = aobUintPtr + 0x6;
 
-                aobAddrStr = convertUintToHexString(addrStrUint);
+                string functionStartStr = convertUintToHexString(addrStrUint);
 
 
                 //MessageBox.Show(convertUintToHexString(addrStrUint));
 
-                UIntPtr caveAddr = m.CreateCodeCave(aobAddrStr, patchedBytes, 9, 1024);
+                UIntPtr caveAddr = m.CreateCodeCave(functionStartStr, patchedBytes, 9, 1024);
 
                 hooked = true;
 
@@ -102,6 +103,17 @@ namespace SWTOR_ChatHook
             {
                 m.WriteBytes(aobUintPtr, originalBytes);
             }
+        }
+
+        public void restoreOriginalBytes()
+        {
+            patchedBytes = m.ReadBytes(aobAddrStr, 15);
+            m.WriteBytes(aobUintPtr, originalBytes);
+        }
+
+        public void restorePatchedBytes()
+        {
+            m.WriteBytes(aobUintPtr, patchedBytes);
         }
 
     }

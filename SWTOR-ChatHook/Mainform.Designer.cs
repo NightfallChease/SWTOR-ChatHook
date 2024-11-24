@@ -33,23 +33,26 @@
             this.lbl_chat = new MaterialSkin.Controls.MaterialLabel();
             this.mainTimer = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtbox_chat = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
+            this.swt_pause = new MaterialSkin.Controls.MaterialSwitch();
+            this.txtbox_chat = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.swt_onTop = new MaterialSkin.Controls.MaterialSwitch();
             this.SuspendLayout();
             // 
             // btn_about
             // 
+            this.btn_about.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_about.AutoSize = false;
             this.btn_about.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_about.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btn_about.Depth = 0;
             this.btn_about.HighEmphasis = true;
             this.btn_about.Icon = null;
-            this.btn_about.Location = new System.Drawing.Point(271, 505);
+            this.btn_about.Location = new System.Drawing.Point(285, 523);
             this.btn_about.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_about.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_about.Name = "btn_about";
             this.btn_about.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btn_about.Size = new System.Drawing.Size(80, 37);
+            this.btn_about.Size = new System.Drawing.Size(70, 32);
             this.btn_about.TabIndex = 1;
             this.btn_about.Text = "About";
             this.btn_about.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -79,37 +82,60 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // swt_pause
+            // 
+            this.swt_pause.AutoSize = true;
+            this.swt_pause.Depth = 0;
+            this.swt_pause.Location = new System.Drawing.Point(9, 523);
+            this.swt_pause.Margin = new System.Windows.Forms.Padding(0);
+            this.swt_pause.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.swt_pause.MouseState = MaterialSkin.MouseState.HOVER;
+            this.swt_pause.Name = "swt_pause";
+            this.swt_pause.Ripple = true;
+            this.swt_pause.Size = new System.Drawing.Size(159, 37);
+            this.swt_pause.TabIndex = 6;
+            this.swt_pause.Text = "Pause logging";
+            this.swt_pause.UseVisualStyleBackColor = true;
+            this.swt_pause.CheckedChanged += new System.EventHandler(this.swt_pause_CheckedChanged);
+            // 
             // txtbox_chat
             // 
-            this.txtbox_chat.AnimateReadOnly = false;
-            this.txtbox_chat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtbox_chat.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtbox_chat.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtbox_chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtbox_chat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_chat.Depth = 0;
-            this.txtbox_chat.HideSelection = true;
-            this.txtbox_chat.Location = new System.Drawing.Point(6, 95);
-            this.txtbox_chat.MaxLength = 32767;
-            this.txtbox_chat.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtbox_chat.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtbox_chat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtbox_chat.Location = new System.Drawing.Point(9, 95);
+            this.txtbox_chat.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtbox_chat.Name = "txtbox_chat";
-            this.txtbox_chat.PasswordChar = '\0';
-            this.txtbox_chat.ReadOnly = true;
-            this.txtbox_chat.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtbox_chat.SelectedText = "";
-            this.txtbox_chat.SelectionLength = 0;
-            this.txtbox_chat.SelectionStart = 0;
-            this.txtbox_chat.ShortcutsEnabled = true;
-            this.txtbox_chat.Size = new System.Drawing.Size(616, 401);
-            this.txtbox_chat.TabIndex = 5;
-            this.txtbox_chat.TabStop = false;
-            this.txtbox_chat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtbox_chat.UseSystemPasswordChar = false;
+            this.txtbox_chat.Size = new System.Drawing.Size(626, 425);
+            this.txtbox_chat.TabIndex = 7;
+            this.txtbox_chat.Text = "";
+            // 
+            // swt_onTop
+            // 
+            this.swt_onTop.AutoSize = true;
+            this.swt_onTop.Depth = 0;
+            this.swt_onTop.Location = new System.Drawing.Point(528, 522);
+            this.swt_onTop.Margin = new System.Windows.Forms.Padding(0);
+            this.swt_onTop.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.swt_onTop.MouseState = MaterialSkin.MouseState.HOVER;
+            this.swt_onTop.Name = "swt_onTop";
+            this.swt_onTop.Ripple = true;
+            this.swt_onTop.Size = new System.Drawing.Size(110, 37);
+            this.swt_onTop.TabIndex = 8;
+            this.swt_onTop.Text = "On Top";
+            this.swt_onTop.UseVisualStyleBackColor = true;
+            this.swt_onTop.CheckedChanged += new System.EventHandler(this.swt_onTop_CheckedChanged);
             // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 551);
+            this.ClientSize = new System.Drawing.Size(641, 563);
+            this.Controls.Add(this.swt_onTop);
             this.Controls.Add(this.txtbox_chat);
+            this.Controls.Add(this.swt_pause);
             this.Controls.Add(this.lbl_chat);
             this.Controls.Add(this.btn_about);
             this.Name = "Mainform";
@@ -125,7 +151,9 @@
         private MaterialSkin.Controls.MaterialLabel lbl_chat;
         private System.Windows.Forms.Timer mainTimer;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private MaterialSkin.Controls.MaterialMultiLineTextBox2 txtbox_chat;
+        private MaterialSkin.Controls.MaterialSwitch swt_pause;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox txtbox_chat;
+        private MaterialSkin.Controls.MaterialSwitch swt_onTop;
     }
 }
 

@@ -16,13 +16,15 @@ namespace SWTOR_ChatHook
 {
     public partial class Mainform : MaterialForm
     {
-        // Define a delegate matching the signature of MessageBoxW
         [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern int MessageBoxW(IntPtr hWnd, string lpText, string lpCaption, uint uType);
 
         Funcs funcs = new Funcs();
         string chatMsgAddr;
         string msgBuffer;
+        bool paused;
+        bool alwaysOnTop;
+
 
         public Mainform()
         {
@@ -33,6 +35,8 @@ namespace SWTOR_ChatHook
             Color bColor = Color.FromArgb(50, 50, 50);
             this.BackColor = bColor;
             this.ForeColor = fColor;
+            txtbox_chat.BackColor = Color.Black;
+            txtbox_chat.ForeColor = Color.Red;
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(funcs.OnProcessExit);
         }
 
@@ -55,7 +59,7 @@ namespace SWTOR_ChatHook
                 msgBuffer = chatMessage;
                 if(msgBuffer == "0")
                 { return; }
-                txtbox_chat.Text = txtbox_chat.Text + msgBuffer + "\r\n";
+                txtbox_chat.Text = txtbox_chat.Text + $"[{DateTime.Now}]>  " + msgBuffer + $"\r\n\r\n";
             }
         }
 
@@ -79,5 +83,36 @@ namespace SWTOR_ChatHook
 
         }
         #endregion
+
+        #region switches
+        private void swt_pause_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!paused)
+            {
+                funcs.restoreOriginalBytes();
+                paused = true;
+            }
+            else
+            {
+                funcs.restorePatchedBytes();
+                paused = false;
+            }
+        }
+
+        private void swt_onTop_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!alwaysOnTop)
+            {
+                this.TopMost = true;
+                alwaysOnTop = true;
+            }
+            else
+            {
+                this.TopMost = false;
+                alwaysOnTop = false;
+            }
+        }
+        #endregion
+
     }
 }
