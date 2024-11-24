@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainform));
             this.btn_about = new MaterialSkin.Controls.MaterialButton();
             this.lbl_chat = new MaterialSkin.Controls.MaterialLabel();
             this.mainTimer = new System.Windows.Forms.Timer(this.components);
@@ -195,6 +196,7 @@
             this.Controls.Add(this.swt_pause);
             this.Controls.Add(this.lbl_chat);
             this.Controls.Add(this.btn_about);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Mainform";
             this.Sizable = false;
             this.Text = "SWTOR Chat Hook";
