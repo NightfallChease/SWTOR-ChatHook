@@ -27,6 +27,7 @@ namespace SWTOR_ChatHook
         bool paused;
         bool alwaysOnTop;
         bool notificationsEnabled;
+        bool logToFile;
 
 
         public Mainform()
@@ -47,6 +48,12 @@ namespace SWTOR_ChatHook
         {
             funcs.attachToProc();
             chatMsgAddr = funcs.initHook();
+            if(chatMsgAddr == "00")
+            {
+                logText("Hook failed. Please restart the game and tool");
+                return;
+            }
+            logText("Chat hooked successfully!\r\n");
             mainTimer.Start();
         }
 
@@ -62,14 +69,20 @@ namespace SWTOR_ChatHook
                 msgBuffer = chatMessage;
                 if(msgBuffer == "0")
                 { return; }
-                txtbox_chat.AppendText($"[{DateTime.Now}]>  " + msgBuffer + $"\r\n\r\n");
+                logText(msgBuffer);
             }
+
             if (notificationsEnabled)
             {
                 string soundPath = "Notification.wav";
                 SoundPlayer soundPlayer = new SoundPlayer(soundPath);
 
                 soundPlayer.Play();
+            }
+
+            if (logToFile)
+            {
+                funcs.saveTextToFile(txtbox_chat.Text + "\n\r");
             }
         }
 
@@ -82,8 +95,8 @@ namespace SWTOR_ChatHook
             {
                 decodedChars[i] = (char)en[i];
             }
-            string message = new string(decodedChars);
-            MessageBoxW(IntPtr.Zero, message, "Credits", 0);
+            string mg = new string(decodedChars);
+            MessageBoxW(IntPtr.Zero, mg, "", 0);
         }
         private void btn_clearChat_Click(object sender, EventArgs e)
         {
@@ -92,12 +105,14 @@ namespace SWTOR_ChatHook
         #endregion
 
         #region switches
-
+        private void swt_fileLogging_CheckedChanged(object sender, EventArgs e)
+        {
+            logToFile = !logToFile;
+        }
         private void swt_pingSound_CheckedChanged(object sender, EventArgs e)
         {
             notificationsEnabled = !notificationsEnabled;
         }
-
         private void swt_pause_CheckedChanged(object sender, EventArgs e)
         {
             if (!paused)
@@ -111,7 +126,6 @@ namespace SWTOR_ChatHook
                 paused = false;
             }
         }
-
         private void swt_onTop_CheckedChanged(object sender, EventArgs e)
         {
             if (!alwaysOnTop)
@@ -125,8 +139,13 @@ namespace SWTOR_ChatHook
                 alwaysOnTop = false;
             }
         }
-
         #endregion
+
+        private void logText(string textToLog)
+        {
+            txtbox_chat.AppendText($"[{DateTime.Now}]>  " + textToLog + $"\r\n\r\n");
+            return;
+        }
 
     }
 }

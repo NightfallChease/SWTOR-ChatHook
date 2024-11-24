@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Memory;
 
@@ -48,9 +45,6 @@ namespace SWTOR_ChatHook
 
                 string functionStartStr = convertUintToHexString(addrStrUint);
 
-
-                //MessageBox.Show(convertUintToHexString(addrStrUint));
-
                 UIntPtr caveAddr = m.CreateCodeCave(functionStartStr, patchedBytes, 9, 1024);
 
                 hooked = true;
@@ -58,10 +52,6 @@ namespace SWTOR_ChatHook
                 UIntPtr chatMsgAddr = caveAddr + 0x37;
 
                 string chatMsgAddrStr = convertUintToHexString(chatMsgAddr);
-
-                //string chatMessage = m.ReadString(chatMsgAddrStr);
-
-                //MessageBox.Show(chatMessage);
 
                 return chatMsgAddrStr;
 
@@ -116,5 +106,15 @@ namespace SWTOR_ChatHook
             m.WriteBytes(aobUintPtr, patchedBytes);
         }
 
+        public void saveTextToFile(string msgToSave)
+        {
+            string docPath = Environment.CurrentDirectory;
+
+            // Use Append mode to add to the file instead of overwriting it
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Messages.txt"), append: true))
+            {
+                outputFile.WriteLine(msgToSave);
+            }
+        }
     }
 }

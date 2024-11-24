@@ -40,6 +40,8 @@
             this.btn_clearChat = new MaterialSkin.Controls.MaterialButton();
             this.swt_pingSound = new MaterialSkin.Controls.MaterialSwitch();
             this.lbl_Notify = new MaterialSkin.Controls.MaterialLabel();
+            this.lbl_logToFile = new MaterialSkin.Controls.MaterialLabel();
+            this.swt_fileLogging = new MaterialSkin.Controls.MaterialSwitch();
             this.SuspendLayout();
             // 
             // btn_about
@@ -112,6 +114,7 @@
             this.txtbox_chat.Location = new System.Drawing.Point(9, 95);
             this.txtbox_chat.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtbox_chat.Name = "txtbox_chat";
+            this.txtbox_chat.ReadOnly = true;
             this.txtbox_chat.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.txtbox_chat.Size = new System.Drawing.Size(525, 425);
             this.txtbox_chat.TabIndex = 7;
@@ -183,11 +186,41 @@
             this.lbl_Notify.TabIndex = 11;
             this.lbl_Notify.Text = "Notify sound";
             // 
+            // lbl_logToFile
+            // 
+            this.lbl_logToFile.AutoSize = true;
+            this.lbl_logToFile.Depth = 0;
+            this.lbl_logToFile.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_logToFile.Location = new System.Drawing.Point(544, 213);
+            this.lbl_logToFile.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_logToFile.Name = "lbl_logToFile";
+            this.lbl_logToFile.Size = new System.Drawing.Size(83, 19);
+            this.lbl_logToFile.TabIndex = 13;
+            this.lbl_logToFile.Text = "File logging";
+            // 
+            // swt_fileLogging
+            // 
+            this.swt_fileLogging.AutoSize = true;
+            this.swt_fileLogging.Depth = 0;
+            this.swt_fileLogging.Location = new System.Drawing.Point(561, 231);
+            this.swt_fileLogging.Margin = new System.Windows.Forms.Padding(0);
+            this.swt_fileLogging.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.swt_fileLogging.MouseState = MaterialSkin.MouseState.HOVER;
+            this.swt_fileLogging.Name = "swt_fileLogging";
+            this.swt_fileLogging.Ripple = true;
+            this.swt_fileLogging.Size = new System.Drawing.Size(58, 37);
+            this.swt_fileLogging.TabIndex = 12;
+            this.swt_fileLogging.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.swt_fileLogging.UseVisualStyleBackColor = true;
+            this.swt_fileLogging.CheckedChanged += new System.EventHandler(this.swt_fileLogging_CheckedChanged);
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 563);
+            this.Controls.Add(this.lbl_logToFile);
+            this.Controls.Add(this.swt_fileLogging);
             this.Controls.Add(this.lbl_Notify);
             this.Controls.Add(this.swt_pingSound);
             this.Controls.Add(this.btn_clearChat);
@@ -196,7 +229,9 @@
             this.Controls.Add(this.swt_pause);
             this.Controls.Add(this.lbl_chat);
             this.Controls.Add(this.btn_about);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Mainform";
             this.Sizable = false;
             this.Text = "SWTOR Chat Hook";
@@ -217,6 +252,8 @@
         private MaterialSkin.Controls.MaterialButton btn_clearChat;
         private MaterialSkin.Controls.MaterialSwitch swt_pingSound;
         private MaterialSkin.Controls.MaterialLabel lbl_Notify;
+        private MaterialSkin.Controls.MaterialLabel lbl_logToFile;
+        private MaterialSkin.Controls.MaterialSwitch swt_fileLogging;
     }
 }
 

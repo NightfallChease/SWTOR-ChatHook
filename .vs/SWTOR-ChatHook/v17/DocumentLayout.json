@@ -3,22 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SWTOR-ChatHook||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\swtor-chathook\\funcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|solutionrelative:swtor-chathook\\funcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\swtor-chathook\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|solutionrelative:swtor-chathook\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|c:\\users\\nightfall\\documents\\c#\\myprojects\\swtor-chathook\\swtor-chathook\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\swtor-chathook\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|solutionrelative:swtor-chathook\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\swtor-chathook\\funcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|solutionrelative:swtor-chathook\\funcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49186FC4-ED99-42BB-AFFA-680290591226}|SWTOR-ChatHook\\SWTOR-ChatHook.csproj|c:\\users\\nightfall\\documents\\c#\\myprojects\\swtor-chathook\\swtor-chathook\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,32 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Funcs.cs",
               "DocumentMoniker": "C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\SWTOR-ChatHook\\Funcs.cs",
               "RelativeDocumentMoniker": "SWTOR-ChatHook\\Funcs.cs",
               "ToolTip": "C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\SWTOR-ChatHook\\Funcs.cs",
               "RelativeToolTip": "SWTOR-ChatHook\\Funcs.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwD8AAAAvAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwHQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T22:25:31.452Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SWTOR-ChatHook",
-              "DocumentMoniker": "C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\SWTOR-ChatHook\\SWTOR-ChatHook.csproj",
-              "RelativeDocumentMoniker": "SWTOR-ChatHook\\SWTOR-ChatHook.csproj",
-              "ToolTip": "C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\SWTOR-ChatHook\\SWTOR-ChatHook.csproj",
-              "RelativeToolTip": "SWTOR-ChatHook\\SWTOR-ChatHook.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-24T03:15:02.722Z",
               "EditorCaption": ""
             },
             {
@@ -64,7 +46,7 @@
               "RelativeDocumentMoniker": "SWTOR-ChatHook\\Mainform.cs",
               "ToolTip": "C:\\Users\\nightfall\\Documents\\C#\\MyProjects\\SWTOR-ChatHook\\SWTOR-ChatHook\\Mainform.cs",
               "RelativeToolTip": "SWTOR-ChatHook\\Mainform.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAhAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAmwFQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T22:07:04.702Z",
               "EditorCaption": ""
