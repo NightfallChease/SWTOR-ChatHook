@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWTOR-ChatHook", "SWTOR-ChatHook\SWTOR-ChatHook.csproj", "{49186FC4-ED99-42BB-AFFA-680290591226}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Debug|x64.ActiveCfg = Debug|x64
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Debug|x64.Build.0 = Debug|x64
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Release|x64.ActiveCfg = Release|x64
+		{49186FC4-ED99-42BB-AFFA-680290591226}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00B5768E-0FCC-4E5C-809F-2A4BC546F3AD}
+	EndGlobalSection
+EndGlobal
