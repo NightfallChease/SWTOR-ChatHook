@@ -111,7 +111,7 @@ namespace SWTOR_ChatHook
         {
             if (filePath == null)
             {
-                string baseFileName = "Messages";
+                string baseFileName = "MessageLog";
                 string extension = ".txt";
                 string directory = Environment.CurrentDirectory;
 

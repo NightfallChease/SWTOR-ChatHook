@@ -26,7 +26,6 @@ namespace SWTOR_ChatHook
         string msgBuffer;
         StringBuilder originalTextBuilder = new StringBuilder(); // Use StringBuilder for better handling
         bool paused;
-        bool alwaysOnTop;
         bool notificationsEnabled;
         bool logToFile;
 
@@ -171,7 +170,6 @@ namespace SWTOR_ChatHook
         private void swt_onTop_CheckedChanged(object sender, EventArgs e)
         {
             this.TopMost = !this.TopMost;
-            alwaysOnTop = this.TopMost;
         }
         #endregion
 
