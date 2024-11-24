@@ -36,6 +36,9 @@
             this.swt_pause = new MaterialSkin.Controls.MaterialSwitch();
             this.txtbox_chat = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.swt_onTop = new MaterialSkin.Controls.MaterialSwitch();
+            this.btn_clearChat = new MaterialSkin.Controls.MaterialButton();
+            this.swt_pingSound = new MaterialSkin.Controls.MaterialSwitch();
+            this.lbl_Notify = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // btn_about
@@ -108,7 +111,8 @@
             this.txtbox_chat.Location = new System.Drawing.Point(9, 95);
             this.txtbox_chat.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtbox_chat.Name = "txtbox_chat";
-            this.txtbox_chat.Size = new System.Drawing.Size(626, 425);
+            this.txtbox_chat.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.txtbox_chat.Size = new System.Drawing.Size(525, 425);
             this.txtbox_chat.TabIndex = 7;
             this.txtbox_chat.Text = "";
             // 
@@ -128,17 +132,71 @@
             this.swt_onTop.UseVisualStyleBackColor = true;
             this.swt_onTop.CheckedChanged += new System.EventHandler(this.swt_onTop_CheckedChanged);
             // 
+            // btn_clearChat
+            // 
+            this.btn_clearChat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_clearChat.AutoSize = false;
+            this.btn_clearChat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_clearChat.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btn_clearChat.Depth = 0;
+            this.btn_clearChat.HighEmphasis = true;
+            this.btn_clearChat.Icon = null;
+            this.btn_clearChat.Location = new System.Drawing.Point(552, 95);
+            this.btn_clearChat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btn_clearChat.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btn_clearChat.Name = "btn_clearChat";
+            this.btn_clearChat.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btn_clearChat.Size = new System.Drawing.Size(70, 32);
+            this.btn_clearChat.TabIndex = 9;
+            this.btn_clearChat.Text = "Clear";
+            this.btn_clearChat.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btn_clearChat.UseAccentColor = false;
+            this.btn_clearChat.UseVisualStyleBackColor = true;
+            this.btn_clearChat.Click += new System.EventHandler(this.btn_clearChat_Click);
+            // 
+            // swt_pingSound
+            // 
+            this.swt_pingSound.AutoSize = true;
+            this.swt_pingSound.Depth = 0;
+            this.swt_pingSound.Location = new System.Drawing.Point(561, 174);
+            this.swt_pingSound.Margin = new System.Windows.Forms.Padding(0);
+            this.swt_pingSound.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.swt_pingSound.MouseState = MaterialSkin.MouseState.HOVER;
+            this.swt_pingSound.Name = "swt_pingSound";
+            this.swt_pingSound.Ripple = true;
+            this.swt_pingSound.Size = new System.Drawing.Size(58, 37);
+            this.swt_pingSound.TabIndex = 10;
+            this.swt_pingSound.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.swt_pingSound.UseVisualStyleBackColor = true;
+            this.swt_pingSound.CheckedChanged += new System.EventHandler(this.swt_pingSound_CheckedChanged);
+            // 
+            // lbl_Notify
+            // 
+            this.lbl_Notify.AutoSize = true;
+            this.lbl_Notify.Depth = 0;
+            this.lbl_Notify.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_Notify.Location = new System.Drawing.Point(544, 156);
+            this.lbl_Notify.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_Notify.Name = "lbl_Notify";
+            this.lbl_Notify.Size = new System.Drawing.Size(92, 19);
+            this.lbl_Notify.TabIndex = 11;
+            this.lbl_Notify.Text = "Notify sound";
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 563);
+            this.Controls.Add(this.lbl_Notify);
+            this.Controls.Add(this.swt_pingSound);
+            this.Controls.Add(this.btn_clearChat);
             this.Controls.Add(this.swt_onTop);
             this.Controls.Add(this.txtbox_chat);
             this.Controls.Add(this.swt_pause);
             this.Controls.Add(this.lbl_chat);
             this.Controls.Add(this.btn_about);
             this.Name = "Mainform";
+            this.Sizable = false;
             this.Text = "SWTOR Chat Hook";
             this.Load += new System.EventHandler(this.Mainform_Load);
             this.ResumeLayout(false);
@@ -154,6 +212,9 @@
         private MaterialSkin.Controls.MaterialSwitch swt_pause;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtbox_chat;
         private MaterialSkin.Controls.MaterialSwitch swt_onTop;
+        private MaterialSkin.Controls.MaterialButton btn_clearChat;
+        private MaterialSkin.Controls.MaterialSwitch swt_pingSound;
+        private MaterialSkin.Controls.MaterialLabel lbl_Notify;
     }
 }
 

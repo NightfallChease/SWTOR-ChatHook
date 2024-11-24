@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using Memory;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SWTOR_ChatHook
 {
@@ -24,6 +26,7 @@ namespace SWTOR_ChatHook
         string msgBuffer;
         bool paused;
         bool alwaysOnTop;
+        bool notificationsEnabled;
 
 
         public Mainform()
@@ -59,32 +62,42 @@ namespace SWTOR_ChatHook
                 msgBuffer = chatMessage;
                 if(msgBuffer == "0")
                 { return; }
-                txtbox_chat.Text = txtbox_chat.Text + $"[{DateTime.Now}]>  " + msgBuffer + $"\r\n\r\n";
+                txtbox_chat.AppendText($"[{DateTime.Now}]>  " + msgBuffer + $"\r\n\r\n");
+            }
+            if (notificationsEnabled)
+            {
+                string soundPath = "Notification.wav";
+                SoundPlayer soundPlayer = new SoundPlayer(soundPath);
+
+                soundPlayer.Play();
             }
         }
 
         #region buttons
         private void btn_about_Click(object sender, EventArgs e)
         {
-            // Encoded character arrays
-            int[] encodedMessage = { 77, 97, 100, 101, 32, 98, 121, 32, 110, 105, 103, 104, 116, 102, 97, 108, 108, 99, 116 };
-
-            // Decode the message dynamically
-            char[] decodedChars = new char[encodedMessage.Length];
-            for (int i = 0; i < encodedMessage.Length; i++)
+            int[] en = { 77, 97, 100, 101, 32, 98, 121, 32, 110, 105, 103, 104, 116, 102, 97, 108, 108, 99, 116 };
+            char[] decodedChars = new char[en.Length];
+            for (int i = 0; i < en.Length; i++)
             {
-                decodedChars[i] = (char)encodedMessage[i];
+                decodedChars[i] = (char)en[i];
             }
-
-            // Combine decoded characters into the final string
             string message = new string(decodedChars);
-
             MessageBoxW(IntPtr.Zero, message, "Credits", 0);
-
+        }
+        private void btn_clearChat_Click(object sender, EventArgs e)
+        {
+            txtbox_chat.Text = string.Empty;
         }
         #endregion
 
         #region switches
+
+        private void swt_pingSound_CheckedChanged(object sender, EventArgs e)
+        {
+            notificationsEnabled = !notificationsEnabled;
+        }
+
         private void swt_pause_CheckedChanged(object sender, EventArgs e)
         {
             if (!paused)
@@ -112,6 +125,7 @@ namespace SWTOR_ChatHook
                 alwaysOnTop = false;
             }
         }
+
         #endregion
 
     }
