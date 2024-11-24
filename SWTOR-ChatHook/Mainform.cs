@@ -63,7 +63,7 @@ namespace SWTOR_ChatHook
         {
             string chatMessage = funcs.readChat(chatMsgAddr);
 
-            // If the message is the same as the previous one, do nothing
+            //If the message is the same as the previous one, do nothing
             if (msgBuffer == chatMessage)
             {
                 return;
@@ -72,49 +72,47 @@ namespace SWTOR_ChatHook
             {
                 msgBuffer = chatMessage;
 
-                // Ignore if the message is empty
+                //Ignore if the message is empty
                 if (msgBuffer == "0")
                 {
                     return;
                 }
 
-                // Check if there's a search term in the filter
+                //Check if there's a search term in the filter
                 if (txtbox_search.Text != "")
                 {
-                    // Check if the message contains the search term (case-insensitive)
+                    //Check if the message contains the search term (case-insensitive)
                     if (msgBuffer.IndexOf(txtbox_search.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
-                        // If it matches the search filter, log it into the filtered text
+                        //If it matches the search filter, log it into the filtered text
                         logText(msgBuffer);
                     }
                     else
                     {
-                        // If it doesn't match, log it into the original (unfiltered) text
+                        //If it doesn't match, log it into the original (unfiltered) text
                         originalTextBuilder.AppendLine($"[{DateTime.Now}]>  {msgBuffer}");
                     }
                 }
                 else
                 {
-                    // If the search box is empty, display the message normally
+                    //If the search box is empty, display the message normally
                     logText(msgBuffer);
                 }
             }
 
-            // Handle notification sound
+            //Handle notification sound
             if (notificationsEnabled)
             {
                 try
                 {
-                    // Play notification sound (if any)
+                    string soundPath = "Notification.wav";
+                    SoundPlayer soundPlayer = new SoundPlayer(soundPath);
+                    soundPlayer.Play();
                 }
                 catch
                 {
                     logText("No notification sound present. Please add a Notification.wav to the folder.");
                 }
-
-                string soundPath = "Notification.wav";
-                SoundPlayer soundPlayer = new SoundPlayer(soundPath);
-                soundPlayer.Play();
             }
 
             // Log to file if enabled
