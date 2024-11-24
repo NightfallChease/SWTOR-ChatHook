@@ -42,6 +42,8 @@
             this.lbl_Notify = new MaterialSkin.Controls.MaterialLabel();
             this.lbl_logToFile = new MaterialSkin.Controls.MaterialLabel();
             this.swt_fileLogging = new MaterialSkin.Controls.MaterialSwitch();
+            this.lbl_search = new MaterialSkin.Controls.MaterialLabel();
+            this.txtbox_search = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.SuspendLayout();
             // 
             // btn_about
@@ -223,11 +225,41 @@
             this.swt_fileLogging.UseVisualStyleBackColor = true;
             this.swt_fileLogging.CheckedChanged += new System.EventHandler(this.swt_fileLogging_CheckedChanged);
             // 
+            // lbl_search
+            // 
+            this.lbl_search.AutoSize = true;
+            this.lbl_search.Depth = 0;
+            this.lbl_search.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_search.Location = new System.Drawing.Point(177, 73);
+            this.lbl_search.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(139, 19);
+            this.lbl_search.TabIndex = 14;
+            this.lbl_search.Text = "Custom word filter: ";
+            // 
+            // txtbox_search
+            // 
+            this.txtbox_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtbox_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbox_search.Depth = 0;
+            this.txtbox_search.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtbox_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtbox_search.Location = new System.Drawing.Point(322, 71);
+            this.txtbox_search.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtbox_search.Multiline = false;
+            this.txtbox_search.Name = "txtbox_search";
+            this.txtbox_search.Size = new System.Drawing.Size(125, 21);
+            this.txtbox_search.TabIndex = 15;
+            this.txtbox_search.Text = "";
+            this.txtbox_search.TextChanged += new System.EventHandler(this.txtbox_search_TextChanged);
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 526);
+            this.Controls.Add(this.txtbox_search);
+            this.Controls.Add(this.lbl_search);
             this.Controls.Add(this.lbl_logToFile);
             this.Controls.Add(this.swt_fileLogging);
             this.Controls.Add(this.lbl_Notify);
@@ -262,6 +294,8 @@
         private MaterialSkin.Controls.MaterialLabel lbl_Notify;
         private MaterialSkin.Controls.MaterialLabel lbl_logToFile;
         private MaterialSkin.Controls.MaterialSwitch swt_fileLogging;
+        private MaterialSkin.Controls.MaterialLabel lbl_search;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox txtbox_search;
     }
 }
 
