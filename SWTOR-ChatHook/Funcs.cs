@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Security.Policy;
 using System.Windows.Forms;
 using Memory;
 
@@ -29,11 +31,11 @@ namespace SWTOR_ChatHook
             try
             {
                 string targetAOB = "EF CC CC CC CC CC 48 83 EC 18 BA 0C 00 FE 7F"; //+6
-                byte[] patchedBytes = { 0x50, 0x53, 0x51, 0x52, 0x56, 0x57, 0x48, 0x8B, 0x02, 0x48, 0x85, 0xC0, 0x0F, 0x84, 0x17, 0x00, 0x00, 0x00, 0x48, 0x8D, 0x32, 0x48, 0x8D, 0x3D, 0x1B, 0x00, 0x00, 0x00, 0xB9, 0x20, 0x01, 0x00, 0x00, 0xF3, 0xA4, 0x5F, 0x5E, 0x5A, 0x59, 0x5B, 0x58, 0x48, 0x83, 0xEC, 0x18, 0xBA, 0x0C, 0x00, 0xFE, 0x7F };
+                byte[] patchedBytes = { 0x50, 0x53, 0x51, 0x52, 0x56, 0x57, 0x48, 0x8B, 0x02, 0x48, 0x85, 0xC0, 0x0F, 0x84, 0x17, 0x00, 0x00, 0x00, 0x48, 0x8D, 0x32, 0x48, 0x8D, 0x3D, 0x1B, 0x00, 0x00, 0x00, 0xB9, 0x00, 0x04, 0x00, 0x00, 0xF3, 0xA4, 0x5F, 0x5E, 0x5A, 0x59, 0x5B, 0x58, 0x48, 0x83, 0xEC, 0x18, 0xBA, 0x0C, 0x00, 0xFE, 0x7F };
 
                 aobAddrStr = m.AoBScan(targetAOB).Result.Sum().ToString("X2");
 
-                if(aobAddrStr == "00")
+                if (aobAddrStr == "00")
                 {
                     return aobAddrStr;
                 }
@@ -62,7 +64,7 @@ namespace SWTOR_ChatHook
                 MessageBox.Show($"Init failed ERROR: {e.Message}");
                 return "0";
             }
-            
+
 
         }
 
@@ -70,7 +72,7 @@ namespace SWTOR_ChatHook
         {
             string chatMessage = m.ReadString(chatMsgAddrStr, length: 600);
 
-            if(chatMessage.Length > 1)
+            if (chatMessage.Length > 1)
             {
                 return chatMessage;
             }
@@ -90,7 +92,7 @@ namespace SWTOR_ChatHook
 
         public void OnProcessExit(object sender, EventArgs e)
         {
-            if(hooked)
+            if (hooked)
             {
                 m.WriteBytes(aobUintPtr, originalBytes);
             }
@@ -135,5 +137,22 @@ namespace SWTOR_ChatHook
                 outputFile.WriteLine(msgToSave);
             }
         }
+
+        public async void updateCheck()
+        {
+            string urlUpdate = "https://github.com/NightfallChease/s/blob/main/chatVer4.sw";
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.GetAsync(urlUpdate).Result;
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Your tool is outdated. Please download a new version from the discord");
+                    Environment.Exit(1);
+                }
+            }
+        }
+
     }
 }

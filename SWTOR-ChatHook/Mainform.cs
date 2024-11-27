@@ -47,6 +47,7 @@ namespace SWTOR_ChatHook
 
         private void Mainform_Load(object sender, EventArgs e)
         {
+            funcs.updateCheck();
             funcs.attachToProc();
             chatMsgAddr = funcs.initHook();
             if (chatMsgAddr == "00")
