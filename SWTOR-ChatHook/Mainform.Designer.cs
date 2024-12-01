@@ -44,6 +44,8 @@
             this.swt_fileLogging = new MaterialSkin.Controls.MaterialSwitch();
             this.lbl_search = new MaterialSkin.Controls.MaterialLabel();
             this.txtbox_search = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_about
@@ -152,7 +154,7 @@
             this.btn_clearChat.Depth = 0;
             this.btn_clearChat.HighEmphasis = true;
             this.btn_clearChat.Icon = null;
-            this.btn_clearChat.Location = new System.Drawing.Point(482, 95);
+            this.btn_clearChat.Location = new System.Drawing.Point(482, 196);
             this.btn_clearChat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btn_clearChat.MouseState = MaterialSkin.MouseState.HOVER;
             this.btn_clearChat.Name = "btn_clearChat";
@@ -170,7 +172,7 @@
             this.swt_pingSound.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.swt_pingSound.AutoSize = true;
             this.swt_pingSound.Depth = 0;
-            this.swt_pingSound.Location = new System.Drawing.Point(491, 174);
+            this.swt_pingSound.Location = new System.Drawing.Point(491, 275);
             this.swt_pingSound.Margin = new System.Windows.Forms.Padding(0);
             this.swt_pingSound.MouseLocation = new System.Drawing.Point(-1, -1);
             this.swt_pingSound.MouseState = MaterialSkin.MouseState.HOVER;
@@ -188,7 +190,7 @@
             this.lbl_Notify.AutoSize = true;
             this.lbl_Notify.Depth = 0;
             this.lbl_Notify.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Notify.Location = new System.Drawing.Point(474, 156);
+            this.lbl_Notify.Location = new System.Drawing.Point(474, 257);
             this.lbl_Notify.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_Notify.Name = "lbl_Notify";
             this.lbl_Notify.Size = new System.Drawing.Size(92, 19);
@@ -201,7 +203,7 @@
             this.lbl_logToFile.AutoSize = true;
             this.lbl_logToFile.Depth = 0;
             this.lbl_logToFile.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_logToFile.Location = new System.Drawing.Point(474, 213);
+            this.lbl_logToFile.Location = new System.Drawing.Point(474, 314);
             this.lbl_logToFile.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_logToFile.Name = "lbl_logToFile";
             this.lbl_logToFile.Size = new System.Drawing.Size(83, 19);
@@ -213,7 +215,7 @@
             this.swt_fileLogging.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.swt_fileLogging.AutoSize = true;
             this.swt_fileLogging.Depth = 0;
-            this.swt_fileLogging.Location = new System.Drawing.Point(491, 231);
+            this.swt_fileLogging.Location = new System.Drawing.Point(491, 332);
             this.swt_fileLogging.Margin = new System.Windows.Forms.Padding(0);
             this.swt_fileLogging.MouseLocation = new System.Drawing.Point(-1, -1);
             this.swt_fileLogging.MouseState = MaterialSkin.MouseState.HOVER;
@@ -253,11 +255,22 @@
             this.txtbox_search.Text = "";
             this.txtbox_search.TextChanged += new System.EventHandler(this.txtbox_search_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(530, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 526);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtbox_search);
             this.Controls.Add(this.lbl_search);
             this.Controls.Add(this.lbl_logToFile);
@@ -276,6 +289,7 @@
             this.Name = "Mainform";
             this.Text = "SWTOR Chat Hook";
             this.Load += new System.EventHandler(this.Mainform_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,6 +310,7 @@
         private MaterialSkin.Controls.MaterialSwitch swt_fileLogging;
         private MaterialSkin.Controls.MaterialLabel lbl_search;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtbox_search;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

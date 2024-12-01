@@ -122,7 +122,6 @@ namespace SWTOR_ChatHook
             }
         }
 
-
         #region buttons
         private void btn_about_Click(object sender, EventArgs e)
         {
