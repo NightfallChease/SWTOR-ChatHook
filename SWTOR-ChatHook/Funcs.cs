@@ -140,7 +140,7 @@ namespace SWTOR_ChatHook
 
         public async void updateCheck()
         {
-            string urlUpdate = "https://github.com/NightfallChease/s/blob/main/chatVer4.sw";
+            string urlUpdate = "https://github.com/NightfallChease/s/blob/main/chatVer5.sw";
 
             using (HttpClient client = new HttpClient())
             {
