@@ -45,6 +45,7 @@
             this.lbl_search = new MaterialSkin.Controls.MaterialLabel();
             this.txtbox_search = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +118,7 @@
             this.txtbox_chat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtbox_chat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_chat.Depth = 0;
-            this.txtbox_chat.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtbox_chat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtbox_chat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtbox_chat.Location = new System.Drawing.Point(9, 95);
             this.txtbox_chat.MouseState = MaterialSkin.MouseState.HOVER;
@@ -206,9 +207,9 @@
             this.lbl_logToFile.Location = new System.Drawing.Point(474, 314);
             this.lbl_logToFile.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_logToFile.Name = "lbl_logToFile";
-            this.lbl_logToFile.Size = new System.Drawing.Size(83, 19);
+            this.lbl_logToFile.Size = new System.Drawing.Size(91, 19);
             this.lbl_logToFile.TabIndex = 13;
-            this.lbl_logToFile.Text = "File logging";
+            this.lbl_logToFile.Text = "Chat logging";
             // 
             // swt_fileLogging
             // 
@@ -232,19 +233,19 @@
             this.lbl_search.AutoSize = true;
             this.lbl_search.Depth = 0;
             this.lbl_search.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_search.Location = new System.Drawing.Point(177, 73);
+            this.lbl_search.Location = new System.Drawing.Point(201, 71);
             this.lbl_search.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbl_search.Name = "lbl_search";
-            this.lbl_search.Size = new System.Drawing.Size(139, 19);
+            this.lbl_search.Size = new System.Drawing.Size(115, 19);
             this.lbl_search.TabIndex = 14;
-            this.lbl_search.Text = "Custom word filter: ";
+            this.lbl_search.Text = "Filter for words: ";
             // 
             // txtbox_search
             // 
             this.txtbox_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtbox_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbox_search.Depth = 0;
-            this.txtbox_search.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtbox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtbox_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtbox_search.Location = new System.Drawing.Point(322, 71);
             this.txtbox_search.MouseState = MaterialSkin.MouseState.HOVER;
@@ -311,6 +312,7 @@
         private MaterialSkin.Controls.MaterialLabel lbl_search;
         private MaterialSkin.Controls.MaterialMultiLineTextBox txtbox_search;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

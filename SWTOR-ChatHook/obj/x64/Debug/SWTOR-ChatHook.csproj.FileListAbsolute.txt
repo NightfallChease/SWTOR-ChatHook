@@ -12,3 +12,17 @@ C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64
 C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\Memory.xml
 C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\nightfall\Documents\C#\MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.csproj.Fody.CopyLocal.cache
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\SWTOR-ChatHook.exe.config
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\SWTOR-ChatHook.exe
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\SWTOR-ChatHook.pdb
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\Memory.xml
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\bin\x64\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.csproj.AssemblyReference.cache
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR_ChatHook.Mainform.resources
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR_ChatHook.Properties.Resources.resources
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.csproj.GenerateResource.cache
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.csproj.CoreCompileInputs.cache
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.csproj.Fody.CopyLocal.cache
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-Ch.98FE013B.Up2Date
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.exe
+C:\Users\nightfall\Documents\C#\!MyProjects\SWTOR-ChatHook\SWTOR-ChatHook\obj\x64\Debug\SWTOR-ChatHook.pdb
